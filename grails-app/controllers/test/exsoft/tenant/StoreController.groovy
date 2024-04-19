@@ -23,11 +23,8 @@ class StoreController {
 //
         def queryObj = new BasicDBObject()
         queryObj.put("name", "麦德龙")
-//        queryObj.put("tenantId", "123456")
         def data = Store.find(queryObj)
         println "find:${data.toList()}"
-//        data = Store.find(queryObj)
-//        println("find111:${data2.toList()}")
         println "done!"
         render "ok"
     }
