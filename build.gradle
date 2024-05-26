@@ -24,8 +24,8 @@ apply plugin:"org.grails.grails-gsp"
 apply plugin:"com.bertramlabs.asset-pipeline"
 
 repositories {
+    maven { url "https://maven.aliyun.com/repository/public/" }
     mavenCentral()
-	maven { url "https://maven.aliyun.com/repository/public/" }
     maven { url "https://repo.grails.org/grails/core" }
 }
 
