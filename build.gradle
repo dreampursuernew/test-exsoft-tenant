@@ -1,5 +1,6 @@
 buildscript {
     repositories {
+        mavenLocal()
 		maven { url "https://maven.aliyun.com/repository/public/" }
         maven { url "https://plugins.gradle.org/m2/" }
         maven { url "https://repo.grails.org/grails/core" }
@@ -24,6 +25,7 @@ apply plugin:"org.grails.grails-gsp"
 apply plugin:"com.bertramlabs.asset-pipeline"
 
 repositories {
+    mavenLocal()
     maven { url "https://maven.aliyun.com/repository/public/" }
     mavenCentral()
     maven { url "https://repo.grails.org/grails/core" }
@@ -78,7 +80,10 @@ dependencies {
     testRuntimeOnly "org.seleniumhq.selenium:selenium-chrome-driver:4.0.0"
     testRuntimeOnly "org.seleniumhq.selenium:selenium-firefox-driver:4.0.0"
 
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+
     implementation 'org.grails.plugins:mongodb:8.2.0'
+    implementation "exsoft:exsoft-tenant:1.0"
 }
 
 bootRun {

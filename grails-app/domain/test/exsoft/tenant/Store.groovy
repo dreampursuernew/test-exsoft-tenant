@@ -5,9 +5,8 @@ import groovy.transform.ToString
 import org.bson.types.ObjectId
 
 @ToString
-class Store implements MultiTenant<Store> {
+class Store{
     ObjectId id
-    String tenantId
 
     String name
     String address
